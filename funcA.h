@@ -3,7 +3,7 @@
 
 class FuncA {
 public:
-    double compute(double x);
+    double compute(double x, int n);
 };
 
 #endif
