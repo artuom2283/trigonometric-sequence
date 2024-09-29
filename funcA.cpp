@@ -2,5 +2,8 @@
 #include <cmath>
 
 double FuncA::compute(double x) {
-    return 0;
+    double result = x;
+    result -= pow(x, 3) / 3;
+    result += 2 * pow(x, 5) / 15;
+    return result; 
 }
