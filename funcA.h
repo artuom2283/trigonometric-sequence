@@ -3,7 +3,8 @@
 
 class FuncA {
 public:
+    // Computes the value of th(x) based on the infinite series
     double compute(double x, int n);
 };
 
-#endif
+#endif // FUNCA_H

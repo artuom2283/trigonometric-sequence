@@ -2,14 +2,14 @@
 #include <cmath>
 
 double FuncA::compute(double x, int n) {
-    double result = x;
-    result -= pow(x, 3) / 3;
-    result += 2 * pow(x, 5) / 15;
+    double result = 0;
     
-    // Если n > 3, добавьте дальнейшие элементы
-    if (n > 3) {
-        // Добавьте дальнейшие элементы для n > 3
+    // Using the series expansion for th(x)
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 1) { // odd terms
+            result += (i == 1) ? x : (pow(x, i) / ((i % 4 == 3) ? (i - 1) : i));
+        }
     }
     
-    return result;
+    return result; // Return the computed result
 }
